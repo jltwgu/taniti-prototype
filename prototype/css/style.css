@@ -1,0 +1,490 @@
+:root {
+  --color-primary: #0077b6;
+  --color-accent: #90e0ef;
+  --color-background: #f7e9c4;
+  --color-cta: #f08080;
+  --color-highlight: #2a9d8f;
+  --color-surface: #ffffff;
+  --font-logo: 'Pacifico', cursive;
+  --font-body: 'Lato', sans-serif;
+  --header-height: 4.5rem;
+}
+
+.color-surface {
+  color: var(--color-surface);
+}
+
+.color-cta {
+  color: var(--color-cta);
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  user-select: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  height: 100vh;
+  padding-top: var(--header-height);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+section h2 {
+  font-family: var(--font-logo);
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color-cta);
+}
+
+section p {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-indicator {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-indicator span {
+  font-size: 3rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+header {
+  opacity: 1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100%;
+}
+
+header nav a {
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: var(--font-body);
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--color-surface);
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../img/beach.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  padding: 1rem 2rem;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  width: fit-content;
+  margin: 1rem auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.breadcrumb a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-highlight);
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: var(--color-cta);
+}
+
+
+#intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+#intro h1 {
+  font-family: var(--font-logo);
+  font-size: 10rem;
+  color: var(--color-surface);
+  z-index: 1;
+  position: relative;
+  pointer-events: none;
+}
+
+#visitor-info .content {
+  flex-grow: 3;
+}
+
+#visitor-info .scroll-indicator {
+  height: auto;
+}
+
+#visitor-info .scroll-indicator.top {
+  justify-content: center;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card-grid a {
+  display: flex;
+  position: relative;
+  flex: 1 1 calc(25% - 10px);
+  min-width: 200px;
+  max-width: 300px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-surface);
+  text-decoration: none;
+  font-family: var(--font-body);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  font-size: 1.25rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.card-grid a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card-grid a:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-grid a:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card-grid a span {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background: var(--color-surface);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-cta);
+  box-shadow: 0 0 0 2px rgba(240, 128, 128, 0.3);
+}
+
+.contact-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-cta);
+  color: var(--color-surface);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: var(--color-highlight);
+}
+
+.back-to-top-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.back-to-top-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top-button:hover {
+  background-color: var(--color-highlight);
+}
+
+.navbar-toggle {
+  display: none;
+  position: relative;
+  background-color: transparent;
+  padding: 1rem;
+  color: white;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-highlight);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+
+body:not(.landing) {
+  --header-height: 9rem;
+}
+
+
+body:not(.landing) main {
+  margin-top: var(--header-height);
+  overflow-y: scroll;
+}
+
+body:not(.landing) header {
+  background-color: var(--color-background);
+}
+
+
+body:not(.landing) section  {
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+body:not(.landing) section h2 {
+  font-size: 2rem;
+}
+
+body:not(.landing) section .text {
+  width: 50%;
+}
+
+body:not(.landing) section p {
+  margin-top: 0;
+  text-align: start;
+}
+
+
+body.visitor-info-page {
+  --header-height: 9rem;
+}
+
+body.visitor-info-page main {
+  margin-top: var(--header-height);
+  overflow-y: auto;
+}
+
+body.visitor-info-page header {
+  background-color: var(--color-background);
+}
+
+body.visitor-info-page section {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem;
+  height: auto;
+}
+
+body.visitor-info-page section h2 {
+  font-size: 2rem;
+  text-align: start;
+}
+
+body.visitor-info-page section .text {
+  width: 100%;
+  max-width: 700px;
+}
+
+body.visitor-info-page section .question {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+
+body.visitor-info-page section .answer {
+  margin-bottom: 1.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .card-grid a {
+    flex: 1 1 calc(50% - 10px);
+  }
+  
+  #about .text-content{
+    overflow-y: scroll;
+    max-height: 300px
+  }
+
+  .card-grid {
+    overflow-y: scroll;
+    max-height: 300px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  #intro h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Taniti</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="visitor-info-page">
+    <header>
+        <nav class="navbar">
+            <a href="../index.html#intro">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#explore">Explore Taniti</a>
+            <a href="../index.html#food-lodging">Food & Lodging</a>
+            <a href="../index.html#transportation">Transportation</a>
+            <a href="../index.html#visitor-info">Visitor Info</a>
+            <a href="#contact-us">Contact Us</a>
+        </nav>
+
+
+        <nav class="navbar-toggle">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="../index.html#intro">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#explore">Explore Taniti</a>
+                <a href="../index.html#food-lodging">Food & Lodging</a>
+                <a href="../index.html#transportation">Transportation</a>
+                <a href="../index.html#visitor-info">Visitor Info</a>
+                <a href="#contact-us">Contact Us</a>
+            </div>
+        </nav>
+
+        <nav class="breadcrumb">
+            <a href="../index.html#intro">Home</a>
+            <span>&gt;</span>
+            <a href="#faq">Visitor Info</a>
+          </nav>
+          
+    </header>
+
+    <main>
+        <section class="faq" id="faq">
+            <h2>FAQ</h2>
+            <div class="text">
+                <p class="question">
+                    Will my device chargers work on Taniti?
+                </p>
+                <p class="answer">
+                    Power outlets are 120 volts (the same as in the United States).
+                </p>
+            
+                <p class="question">
+                    What time do the bars close on Taniti?
+                </p>
+                <p class="answer">
+                    Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m.
+                </p>
+            
+                <p class="question">
+                    What is the drinking age on Taniti?
+                </p>
+                <p class="answer">
+                    The drinking age on Taniti is 18 and the drinking age is not strictly enforced.
+                </p>
+            
+                <p class="question">
+                    What langues are spoken on the island?
+                </p>
+                <p class="answer">
+                    Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially by
+                    the older residents.
+                </p>
+            
+                <p class="question">
+                    Where do I go if I get sick or injured?
+                </p>
+                <p class="answer">
+                    There is one hospital and several clinics. The hospital has many multilingual employees.
+                </p>
+            
+                <p class="question">
+                    Is there a lot of crime on the island?
+                </p>
+                <p class="answer">
+                    Violent crime is very rare on Taniti, but as tourism increases, there are more reports of pickpocketing
+                    and other petty crimes.
+                </p>
+            
+                <p class="question">
+                    Are there any national holidays on the island?
+                </p>
+                <p class="answer">
+                    Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will be
+                    closed on holidays, so visitors should plan accordingly.
+                </p>
+            
+                <p class="question">
+                    What currency does the island use? Will I need to convert my currency?
+                </p>
+                <p class="answer">
+                    Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen. Several
+                    banks facilitate currency exchange, and many businesses accept major credit cards.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+            
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+            
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+            
+                <button type="submit">Send</button>
+              </form>
+        </section>
+
+
+    </main>
+    
+    <script src="../js/pages.js"></script>
+</body>
+
+</html>

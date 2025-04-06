@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Taniti</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="landing">
+    <header>
+        <nav class="navbar">
+            <a href="#intro">Home</a>
+            <a href="#about">About</a>
+            <a href="#explore">Explore Taniti</a>
+            <a href="#food-lodging">Food & Lodging</a>
+            <a href="#transportation">Transportation</a>
+            <a href="#visitor-info">Visitor Info</a>
+            <a href="./pages/visitor-info.html#contact-us">Contact Us</a>
+        </nav>
+
+
+        <nav class="navbar-toggle">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a href="#intro">Home</a>
+              <a href="#about">About</a>
+              <a href="#explore">Explore Taniti</a>
+              <a href="#food-lodging">Food & Lodging</a>
+              <a href="#transportation">Transportation</a>
+              <a href="#visitor-info">Visitor Info</a>
+              <a href="./pages/visitor-info.html#contact-us">Contact Us</a>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="content">
+                <h1>Taniti</h1>
+            </div>
+            <div class="scroll-indicator bottom" >
+                <span class="material-symbols-outlined color-surface">keyboard_arrow_down</span>
+            </div>
+        </section>
+        <section id="about">
+            <div class="scroll-indicator top">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_up</span>
+            </div>
+            <div class="content">
+                <h2>About The Island</h2>
+                <div class="text-content">
+                    <p>Taniti is a small, tropical island in the Pacific. While the island has an area of less than 500 square
+                        miles, the terrain is varied and includes both sandy and rocky beaches, a small but safe harbor, lush
+                        tropical rainforests, and a mountainous interior that includes a small, active volcano. Taniti has an
+                        indigenous population of about 20,000 
+                    </p>
+                </div>
+            </div>
+            <div class="scroll-indicator bottom">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_down</span>
+            </div>
+        </section>
+
+        <section id="explore">
+            <div class="scroll-indicator top">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_up</span>
+            </div>
+            <div class="content">
+                <h2>Explore Taniti</h2>
+
+                <div class="card-grid exact-eight">
+                    <a href="./pages/explore.html#beaches" style="background-image: url('img/beach2.jpg');"><span>Beaches</span></a>
+                    <a href="./pages/explore.html#rainforest" style="background-image: url('img/rainforest.jpg');"><span>Rainforest Hikes</span></a>
+                    <a href="./pages/explore.html#volcano" style="background-image: url('img/volcano.jpg');"><span>Volcano</span></a>
+                    <a href="./pages/explore.html#sightseeing" style="background-image: url('img/siteseeing.jpg');"><span>Sightseeing & Tours</span></a>
+                    <a href="./pages/explore.html#museums" style="background-image: url('img/museum.jpg');"><span>Museums</span></a>
+                    <a href="./pages/explore.html#pubs" style="background-image: url('img/pubs.jpg');"><span>Pubs</span></a>
+                    <a href="./pages/explore.html#nightlife" style="background-image: url('img/nightlife.jpg');"><span>Nightlife</span></a>
+                    <a href="./pages/explore.html#golf" style="background-image: url('img/golf.jpg');"><span>Golf</span></a>
+                </div>
+            </div>
+            <div class="scroll-indicator bottom">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_down</span>
+            </div>
+        </section>
+
+        <section id="food-lodging">
+            <div class="scroll-indicator top">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_up</span>
+            </div>
+            <div class="content">
+                <h2>Food & Lodging</h2>
+                <div class="card-grid">
+                    <a href="./pages/food-lodging.html#restaurants"
+                        style="background-image: url('img/restaurant.jpg');"><span>Restaurants</span></a>
+                    <a href="./pages/food-lodging.html#grocery" style="background-image: url('img/grocery.jpg');"><span>Grocery
+                            Stores</span></a>
+                    <a href="./pages/food-lodging.html#lodging" style="background-image: url('img/lodging.jpg');"><span>Lodging</span></a>
+                </div>
+            </div>
+            <div class="scroll-indicator bottom">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_down</span>
+            </div>
+        </section>
+
+        <section id="transportation">
+            <div class="scroll-indicator top">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_up</span>
+            </div>
+            <div class="content">
+                <h2>Transportation</h2>
+                <div class="card-grid">
+                    <a href="./pages/transportation.html#plane" style="background-image: url('img/plane.jpg');"><span>Arriving by
+                            Plane</span></a>
+                    <a href="./pages/transportation.html#cruise" style="background-image: url('img/cruise.jpg');"><span>Arriving by
+                            Cruise</span></a>
+                    <a href="./pages/transportation.html#getting-around" style="background-image: url(img/taxi.jpg);"><span>Getting Around</span></a>
+                </div>
+            </div>
+            <div class="scroll-indicator bottom">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_down</span>
+            </div>
+        </section>
+
+        <section id="visitor-info">
+            <div class="scroll-indicator top">
+                <span class="material-symbols-outlined color-cta">keyboard_arrow_up</span>
+            </div>
+            <div class="content">
+                <h2>Visitor Info</h2>
+                <div class="card-grid">
+                    <a href="./pages/visitor-info.html#faq" style="background-image: url('img/faq.jpg');"><span>FAQ</span></a>
+                    <a href="./pages/visitor-info.html#contact-us" style="background-image: url('img/contact.jpg');"><span>Contact Us</span></a>
+                </div>
+            </div>
+            <div class="back-to-top-wrapper">
+                <a href="#intro" class="back-to-top-button">Back to Top</a>
+              </div>
+        </section>
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
